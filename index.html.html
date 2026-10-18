@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Victor de Jesus</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#F4F6FB;--card:#FFFFFF;--line:#D8DEEE;--text:#101B3A;--muted:#55628A;--accent:#C98F00;--on-accent:#101B3A;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C1430;--card:#16224A;--line:#26356B;--text:#F3F5FA;--muted:#9AA6C4;--accent:#F2B705;--on-accent:#0C1430;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0C1430;--card:#16224A;--line:#26356B;--text:#F3F5FA;--muted:#9AA6C4;--accent:#F2B705;--on-accent:#0C1430;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",system-ui,sans-serif;line-height:1.5;min-height:100vh}
+main{max-width:460px;margin:0 auto;padding:40px 20px 48px}
+.avatar{width:96px;height:96px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 36px "Bricolage Grotesque",sans-serif;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+h1{font:800 clamp(38px,11vw,52px)/1 "Bricolage Grotesque",sans-serif;margin:22px 0 10px;letter-spacing:-.02em}
+.lead{font-size:18px;margin:0 0 6px;max-width:34ch}
+.sub{color:var(--muted);margin:0 0 22px;max-width:44ch}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 32px;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:14px;color:var(--muted)}
+.links{display:grid;gap:12px}
+.link{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;border-radius:14px;background:var(--card);border:1px solid var(--line);color:var(--text);text-decoration:none;transition:transform .15s,border-color .15s}
+.link:hover{border-color:var(--accent);transform:translateY(-2px)}
+.link:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.link strong{display:block;font:700 17px "Bricolage Grotesque",sans-serif}
+.link span{font-size:14px;color:var(--muted)}
+.link.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.link.main span{color:var(--on-accent);opacity:.8}
+.mission{margin:36px 0 0;padding:20px;border-left:4px solid var(--accent);background:var(--card);border-radius:0 14px 14px 0}
+.mission h2{font:700 19px "Bricolage Grotesque",sans-serif;margin:0 0 6px}
+.mission p{margin:0;color:var(--muted)}
+footer{margin-top:36px;font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.link{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <div class="avatar" id="avatar">VJ</div>
+  <h1>Victor de Jesus</h1>
+  <p class="lead">Jovem a crescer e a construir negócios em Angola.</p>
+  <p class="sub">Tenho 23 anos, estudo Engenharia Informática no ISPTEC e construo o meu caminho a trabalhar e a empreender em Luanda. Uso o marketing, que é o que domino, para fazer os negócios crescer. Partilho o processo para ajudar outros jovens a começar.</p>
+  <ul class="tags">
+    <li>Evolução</li><li>Negócios</li><li>Empreendedorismo</li><li>ISPTEC</li>
+  </ul>
+  <nav class="links" id="links" aria-label="Links"></nav>
+  <section class="mission">
+    <h2>Grupo Elevate</h2>
+    <p>Fundei o Grupo Elevate para gerar emprego em Angola. Trabalhamos em estética, serviços de limpeza e projetos sociais, incluindo o Next Gen, que ajuda jovens a crescer. Parcerias institucionais são bem-vindas.</p>
+  </section>
+  <section class="mission">
+    <h2>O que vais encontrar no meu Instagram</h2>
+    <p>A minha evolução como jovem a trabalhar e a empreender: negócios, lições do dia a dia e o que aprendo pelo caminho, sem filtros.</p>
+  </section>
+  <footer>© <span id="year"></span> Victor de Jesus</footer>
+</main>
+<script>
+// EDITA AQUI: troca os links pelos teus.
+var CONFIG = {
+  photo: "", // opcional: cola aqui o link de uma foto tua (https://...)
+  links: [
+    {title:"Segue-me no Instagram", desc:"Conteúdo novo todas as semanas", url:"https://www.instagram.com/victordejesuus/", main:true},
+    {title:"Fala comigo no WhatsApp", desc:"Negócios, marketing e parcerias", url:"https://wa.me/244940548881?text=Ol%C3%A1%20Victor!%20Vi%20o%20teu%20link%20da%20bio%20e%20gostava%20de%20falar%20contigo%20sobre%20neg%C3%B3cios%2C%20marketing%20ou%20parcerias."},
+    {title:"Envia-me um email", desc:"Para propostas e contactos formais", url:"mailto:jesusvictor2677@gmail.com?subject=Contacto%20via%20link%20da%20bio&body=Ol%C3%A1%20Victor%2C%20vi%20o%20teu%20perfil%20e%20gostava%20de%20falar%20contigo%20sobre%3A%20"},
+    {title:"Grupo Elevate", desc:"Estética, serviços e projetos sociais em Angola", url:"https://www.instagram.com/grupoelevateangola/"}
+  ]
+};
+var box=document.getElementById("links");
+CONFIG.links.forEach(function(l){
+  var a=document.createElement("a");
+  a.className="link"+(l.main?" main":"");
+  a.href=l.url;
+  if(l.url.indexOf("http")===0){a.target="_blank";a.rel="noopener"}
+  var d=document.createElement("div");
+  var s=document.createElement("strong");s.textContent=l.title;
+  var p=document.createElement("span");p.textContent=l.desc;
+  d.appendChild(s);d.appendChild(p);
+  a.appendChild(d);
+  var ar=document.createElement("span");ar.textContent="›";ar.setAttribute("aria-hidden","true");
+  a.appendChild(ar);
+  box.appendChild(a);
+});
+if(CONFIG.photo){var im=document.createElement("img");im.src=CONFIG.photo;im.alt="Victor de Jesus";var av=document.getElementById("avatar");av.textContent="";av.appendChild(im);}
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
